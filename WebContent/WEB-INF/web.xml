@@ -9,6 +9,45 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  <build>
+  
+  <plugins>
+  <sourceDirectory>src</sourceDirectory>
+   <plugin>
+        <groupId>maven-compiler-plugin</groupId>
+        <version>3.7.0</version>
+        
+        <configuration>
+        <warSourceDirectory>WebContent</warSourceDirectory>
+        </configuration>
+        </plugin>
+        <plugin>
+        <groupId>maven-war-plugin</groupId>
+        <version>3.2.3</version>
+        
+        <configuration>
+        </configuration>
+        </plugin>
+        
+      <plugin>
+        <groupId>com.heroku.sdk</groupId>
+        <artifactId>heroku-maven-plugin</artifactId>
+        <version>3.0.3</version>
+        
+        <configuration>
+  <appName>rec-uds123</appName>
+   <processTypes>
+     <web>java $JAVA_OPTS -cp target/classes:target/dependency/* Main</web>
+  </processTypes>
+  </configuration>
+        
+      </plugin>
+    </plugins>
+    
+   
+    
+  </build>
+  
   <servlet>
 		<servlet-name>Page</servlet-name>
 		<servlet-class>com.page.Page</servlet-class>
@@ -177,7 +216,7 @@
 		
 		<welcome-file>index.jsp</welcome-file>
 	</welcome-file-list>
-	
+
 
 
 </web-app>
