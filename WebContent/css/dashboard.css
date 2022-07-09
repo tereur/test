@@ -1,0 +1,123 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+:root{
+	--blue:#0046fd;
+	--white:#fff;
+	--black:#000;
+	--lightblue:#b3bbd1;
+	--gray:#e5e5e5;
+}
+*{margin: 0px;  padding: 0px; font-family: 'Montserrat', sans-serif;}
+
+
+.main{ padding-left: 5%; padding-right:5%;}
+
+
+@keyframes pulse-red {
+	0% {
+		transform: scale(0.85);
+		box-shadow: 0 0 0 0 rgba(255, 82, 82, 0.7);
+	}
+	
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 25px rgba(255, 82, 82, 0);
+	}
+	
+	100% {
+		transform: scale(0.85);
+		box-shadow: 0 0 0 0 rgba(255, 82, 82, 0);
+	}
+}
+
+.table{
+	margin-top:2%;
+}
+
+.table tr {
+ padding-bottom:10%;
+}
+
+.table th,
+.table td {
+  padding-bottom: 5%;
+  text-align: left;
+
+}
+
+.table th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.tab-img{
+	display: inline-block;
+    width: 30px;
+    vertical-align: middle;
+    border: 1px solid #000;
+    border-radius: 18px;
+    margin-right: 8px;
+}
+.ticon{
+	padding: 5px;
+	background: var(--gray);
+	border-radius: 4px;
+	width: 15px;
+	height: 15px;
+	text-align: center;
+}
+.pe{
+	content: '';
+	position:absolute;
+	width: 7px;
+	height: 7px;
+	background: red;
+	border-radius: 10px;
+	left: 10px;
+    top: 37px;
+    transform: scale(0.5);
+	box-shadow: 0 0 0 0 rgba(255, 82, 82, 1);
+	animation: pulse-red 2s infinite;
+	cursor: pointer;
+}
+.de{
+	content: '';
+	position:absolute;
+	width: 7px;
+	height: 7px;
+	background: green;
+	border-radius: 10px;
+	left: 10px;
+    top: 37px;
+    transform: scale(0.5);
+	box-shadow: 0 0 0 0 rgba(255, 82, 82, 1);
+	animation: pulse-green 2s infinite;
+	cursor: pointer;
+}
+@keyframes pulse-green {
+	0% {
+		transform: scale(0.85);
+		box-shadow: 0 0 0 0 rgba(82, 255, 82, 0.7);
+	}
+	
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 25px rgba(82, 255, 82, 0);
+	}
+	
+	100% {
+		transform: scale(0.85);
+		box-shadow: 0 0 0 0 rgba(82, 255, 82, 0);
+	}
+}
+.active-tr{
+	background: var(--blue);
+	color: var(--white);
+}
+.active-tr .ticon{
+	background: #e5e5e54f;
+}
+
+
+
+	
